@@ -1,0 +1,52 @@
+package Pieces;
+import GUI.PieceGUI;
+import Play.*;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
+
+import java.io.FileInputStream;
+
+public abstract class Piece {
+
+    Vector position;
+    final Sides side;
+    protected Chessboard board;
+    private PieceGUI view;
+
+    public Piece(Chessboard board, Vector initialPosition, Sides side) {
+        this.position = initialPosition;
+        this.side = side;
+        this.board = board;
+    }
+
+    //Getters
+    public Vector getPosition() { return position; }
+
+    public Sides getSide() {
+        return side;
+    }
+    public PieceGUI getView() {
+        return this.view;
+    }
+
+    public boolean isWhite() { return this.side == Sides.WHITE;}
+    public boolean isBlack() { return this.side == Sides.BLACK;}
+
+
+    //Setters
+    public void setPosition(Vector newPosition) {
+        this.position = newPosition;
+    }
+
+    abstract public boolean canMove(Vector destination);
+
+    public boolean sameSide(Piece other) {
+        return this.side.equals(other.getSide());
+    }
+
+    public void setView(PieceGUI view) {
+        this.view = view;
+    }
+}
