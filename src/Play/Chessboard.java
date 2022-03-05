@@ -107,14 +107,12 @@ public class Chessboard {
         Tile start = this.squares[moveFrom.x][moveFrom.y];
         Tile end = this.squares[moveTo.x][moveTo.y];
 
-        // TO-DO: Pawn capture
         if (!(start.isOccupied()
                 && end.getPosition().isOnBoard()
                 && start.getPiece().canMove(end.getPosition()))) {
             return false;
         }
 
-        // TO-DO : is capture legal?
         if (!end.isOccupied()) {
             return true;
         } else return !end.getPiece().sameSide(start.getPiece());

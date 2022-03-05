@@ -1,12 +1,9 @@
 package Pieces;
-import GUI.PieceGUI;
-import Play.*;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 
-import java.io.FileInputStream;
+import GUI.PieceGUI;
+import Play.Chessboard;
+import Play.Sides;
+import Play.Vector;
 
 public abstract class Piece {
 

@@ -43,10 +43,6 @@ public class Move {
         this.piece.setPosition(moveTo);
         this.board.putPiece(piece);
 
-
-
-       // this.end.setPiece(this.start.getPiece());
-      //  this.start.deletePiece();
     }
 
 }

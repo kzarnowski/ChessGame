@@ -1,15 +1,5 @@
 package Play;
 
-/*----------------------------------------
-        TO DO
-        1) usuwanie figury z gui po zbiciu
-        2) king: roszada, bycie szachowanym
-        3) lista ruchów
-        4) pawn: bicie w przelocie (?)
-        5) Observer
-        6) Podświetlanie zaznaczonego grida
-----------------------------------------*/
-
 import GUI.BoardGUI;
 import Pieces.Piece;
 import Pieces.Rook;
@@ -42,20 +32,7 @@ public class Game {
     }
 
     public void play() {
-
         boolean xd = board.isLegalMove(new Vector(4,4), new Vector(4,4));
-//
-//        while (true) {
-//            try {
-//
-//            }
-//            catch(Exception e) {
-//                System.out.println("Illegal move");
-//                System.out.println(board.toString());
-//            }
-//        }
-
-
     }
 
     public void addPiece() {
